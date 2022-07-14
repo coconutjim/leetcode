@@ -2,6 +2,8 @@
 234. Palindrome Linked List
 Easy
 
+https://leetcode.com/problems/palindrome-linked-list/
+
 Given the head of a singly linked list, return true if it is a palindrome.
 
 Example 1:
@@ -40,24 +42,23 @@ Space: O(1)
 #         self.next = next
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
-		# If 1 element, return True
-        if head.next is None:
+	# If 1 element, return True
+        if not head.next:
             return True
-		
         fast = head
         slow = head
         prev = None
-        while fast is not None and fast.next is not None:
+        while fast and fast.next:
             fast = fast.next.next
             nxt = slow.next
             slow.next = prev
             prev = slow
             slow = nxt
  
-        if fast is not None:
+        if fast:
             slow = slow.next
-        
-        while slow is not None:
+            
+        while slow:
             if slow.val != prev.val:
                 return False
             slow = slow.next
