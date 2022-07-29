@@ -32,7 +32,7 @@ The number of the nodes in the tree will be in the range [1, 10^4]
 '''
 Solution
 
-Preorder traversal (recursive) and add path to string.
+Inorder traversal (recursive) and add path to string.
 Save paths in dict (Counter)
 Add only when counter == 2 to get any of the duplicates
 

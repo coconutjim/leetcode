@@ -43,7 +43,7 @@ Solution
 
 We can tranform a + b + c = d to a + b = d - c, and use 2 pointers to find 2 pairs
 
-Time: O(n)
+Time: O(n^2)
 '''
 
 class Solution:
